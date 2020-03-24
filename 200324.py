@@ -199,4 +199,247 @@ Jun
 Jul
 >>> 
 >>> #Break, Continue
+>>> i = 0
+>>> while True:
+	print(i)
+	i += 1
+	if i == 100:
+		break
+
+	
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+>>> for i in (100):
+	if i % 2 == 0:
+		continue
+print(i)
+SyntaxError: invalid syntax
+>>> for i in (100):
+	if i % 2 == 0:
+		continue
+	print(i)
+
+	
+Traceback (most recent call last):
+  File "<pyshell#108>", line 1, in <module>
+    for i in (100):
+TypeError: 'int' object is not iterable
+>>> for i in (100):
+	if i % 2 == 0:
+		continue
+	print([i])
+
+	
+Traceback (most recent call last):
+  File "<pyshell#110>", line 1, in <module>
+    for i in (100):
+TypeError: 'int' object is not iterable
+>>> for i in (100):
+	if i%2 == 0:
+		continue
+	print(i)
+
+	
+Traceback (most recent call last):
+  File "<pyshell#112>", line 1, in <module>
+    for i in (100):
+TypeError: 'int' object is not iterable
+>>> for i in 100:
+	if i % 2 == 0:
+		continue
+	print(i)
+
+	
+Traceback (most recent call last):
+  File "<pyshell#114>", line 1, in <module>
+    for i in 100:
+TypeError: 'int' object is not iterable
+>>> for i in int(100):
+	if i % 2 == 0:
+		continue
+	print(i)
+
+	
+Traceback (most recent call last):
+  File "<pyshell#116>", line 1, in <module>
+    for i in int(100):
+TypeError: 'int' object is not iterable
+>>> for i in range(100):
+	if i % 2 == 0:
+		continue
+	print(i)
+
+	
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+47
+49
+51
+53
+55
+57
+59
+61
+63
+65
+67
+69
+71
+73
+75
+77
+79
+81
+83
+85
+87
+89
+91
+93
+95
+97
+99
+>>> #오류해결 참고(https://www.codecademy.com/forum_questions/54f231c876b8fe4269002f2f)
+>>> 
+>>> #파일 읽기
+>>> import sys
+>>> #139
+>>> input_file = sys.argv[1]
+Traceback (most recent call last):
+  File "<pyshell#124>", line 1, in <module>
+    input_file = sys.argv[1]
+IndexError: list index out of range
+>>> input_file = sys.argv[1]
+Traceback (most recent call last):
+  File "<pyshell#125>", line 1, in <module>
+    input_file = sys.argv[1]
+IndexError: list index out of range
+>>> print("Output #139: ")
+Output #139: 
+>>> input_file = sys.argv[1]
+Traceback (most recent call last):
+  File "<pyshell#127>", line 1, in <module>
+    input_file = sys.argv[1]
+IndexError: list index out of range
+>>> python file_to_read.py
+SyntaxError: invalid syntax
 >>> 
