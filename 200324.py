@@ -443,3 +443,33 @@ IndexError: list index out of range
 >>> python file_to_read.py
 SyntaxError: invalid syntax
 >>> 
+
+import sys
+input_file = sys.argv[1]
+filereader = open(input_file, 'r')
+for row in filereader:
+	print(row.strip())
+filereader.close()
+ #오류해결 : import sys ~ filereader.close() 스크립트에 입력 후 저장 
+ #  -> cmd 창에서 디렉토리 지정 후 python 200324_test.py file_to_read.txt 실행(python (스크립트명) (읽을 파일명))
+ 
+ import sys
+#파일 작성하기
+#하나의 텍스트 파일 작성하기
+my_letters = ['a','b','c','d','e','f','g','h','i','j']
+max_index = len(my_letters)
+output_file = sys.argv[1]
+filewriter = open(output_file, 'w')
+for index_value in range(len(my_letters)):
+    if index_value < (max_index-1):
+        filewriter.write(my_letters[index_value]+'\t')
+    else:
+        filewriter.write(my_letters[index_value]+'\n')
+filewriter.close()
+#142
+print("Output written to file")
+
+#cmd 창에서 실행
+#python 200324_1.py write_to_file.txt
+#notepad write_to_file.txt
+#200324_1.py 파일 이용해 write_to_file.txt 파일 작성 -> write_to_file.txt 파일 실행
