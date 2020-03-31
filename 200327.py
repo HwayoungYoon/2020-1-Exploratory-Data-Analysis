@@ -82,3 +82,9 @@ Traceback (most recent call last):
 AttributeError: 'tuple' object has no attribute 'append'
 >>> ###튜플은 수정(삽입) 불가
 >>> 
+>>> #딕셔너리
+>>> goals = {'통계':4.0, '수학':4.5, '미디어공학':4.5}
+>>> print(goals)
+{'통계': 4.0, '수학': 4.5, '미디어공학': 4.5}
+>>> print(type(goals))
+<class 'dict'>
