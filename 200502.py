@@ -184,8 +184,19 @@ sns.pairplot(wine_sample, kind="reg", hue="type", diag_kind="hist",
              vars=['quality','alcohol','residual sugar'])
 """
 TypeError: Cannot cast array data from dtype('int64') to dtype('int32') according to the rule 'safe'
-#####
-오류 해결 X
+
+quality : int64
+alcohol : float64
+residual sugar : float64
+
+###오류 해결 시도1(실패)
+import numpy as np
+wine_sample['quality'] = wine_sample['quality'].astype(np.int32)
+wine_sample['alcohol'] = wine_sample['alcohol'].astype(np.int32)
+wine_sample['residual sugar'] = wine_sample['residual sugar'].astype(np.int32)
+
+###오류 해결 시도2(실패)
+wine_sample['quality'] = wine_sample['quality'].astype(np.float64)
 """
 
 plt.suptitle("Histograms and Scatter plots of Quality, Alcohol, and Residual Sugar")
