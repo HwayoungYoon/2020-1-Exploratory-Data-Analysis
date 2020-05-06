@@ -197,6 +197,14 @@ wine_sample['residual sugar'] = wine_sample['residual sugar'].astype(np.int32)
 
 ###오류 해결 시도2(실패)
 wine_sample['quality'] = wine_sample['quality'].astype(np.float64)
+
+###오류 해결 시도3(성공)
+  File "C:\Python\anaconda3\lib\site-packages\seaborn\algorithms.py"
+  line 84 : (before -> after)
+      resampler = integers(0, n, n)
+      resampler = integers(0, n, n, dtype=np.int_)
+<참고>
+https://stackoverflow.com/questions/60060301/typeerror-cannot-cast-array-data-from-dtypeint64-to-dtypeint32-accordin
 """
 
 plt.suptitle("Histograms and Scatter plots of Quality, Alcohol, and Residual Sugar")
