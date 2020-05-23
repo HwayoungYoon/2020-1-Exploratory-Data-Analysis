@@ -10,9 +10,9 @@ from scipy.stats.mstats import kruskalwallis
 
 df = pd.read_excel("experiment.xls")
 
-group1 = df[df.iloc[:,1]==1][0]
-group2 = df[df.iloc[:,1]==2][0]
-group3 = df[df.iloc[:,1]==3][0]
+group1 = df[df.iloc[:,0]=="Control"]["weight"]
+group2 = df[df.iloc[:,0]=="TreatmentA"]["weight"]
+group3 = df[df.iloc[:,0]=="TreatmentB"]["weight"]
 
 #levene의 등분산 검정
 (W, p) = stats.levene(group1, group2, group3)
