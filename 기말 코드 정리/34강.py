@@ -40,7 +40,7 @@ print(corr)
 
 
 """
-상관계수
+상관행렬 플롯
 """
 import pandas as pd
 import numpy as np
